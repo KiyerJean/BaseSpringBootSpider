@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+	<generatorConfiguration>
+	 	<classPathEntry  location="D:/work/generator/generator/mysql-connector-java-5.1.22-bin.jar"/>    
+		  <context id="MysqlTables" targetRuntime="MyBatis3" defaultModelType="flat">
+	        <property name="javaFileEncoding" value="UTF-8" />
+	
+	        <!-- 配置生成toString()方法 -->
+	        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+	
+	        <commentGenerator>
+	            <!-- 是否禁止显示日期 true：是 ： false:否 -->
+	            <property name="suppressDate" value="true" />
+	            <!-- 是否去除自动生成的所有注释 true：是 ： false:否 -->
+	            <property name="suppressAllComments" value="true" />
+	            <!-- 是否添加字段注释 true:是 false：否 -->
+	            <property name="addRemarkComments" value="true" />
+	        </commentGenerator>
+	
+	        <!--数据库链接URL，用户名、密码 -->
+	        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/spider?serverTimezone=UTC" userId="root" password="root"/>
+	
+	        <javaTypeResolver>
+	            <property name="forceBigDecimals" value="false" />
+	        </javaTypeResolver>
+	
+	        <!-- 配置生成Model实体类的包名和位置 -->
+	        <!-- 通过maven管理插件时targetProject的路径为绝对路径：E:\Myeclipse2017WorkSpace\wywmsj -->
+	        <!-- 通过自安装插件生成时的地址：wywmsj -->
+	        <javaModelGenerator targetPackage="com.yunshan.model" targetProject="SpiderToumingfangchan/src/main/java">
+	            <property name="enableSubPackages" value="true" />
+	            <property name="trimStrings" value="true" />
+	        </javaModelGenerator>
+	        
+	        <!-- 配置生成映射文件的包名和位置 -->
+	        <!-- 通过maven管理插件时targetProject的路径为绝对路径：E:\Myeclipse2017WorkSpace\wywmsj -->
+	        <!-- 通过自安装插件生成时的地址：wywmsj -->
+	        <sqlMapGenerator targetPackage="mapper" targetProject="SpiderToumingfangchan/src/main/resources">
+	            <property name="enableSubPackages" value="true" />
+	        </sqlMapGenerator>
+	        
+	        <!-- 配置生成Dao文件的包名和位置 -->
+	        <!-- 通过maven管理插件时targetProject的路径为绝对路径：E:\Myeclipse2017WorkSpace\wywmsj -->
+	        <!-- 通过自安装插件生成时的地址：wywmsj --> 
+	        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yunshan.dao" targetProject="SpiderToumingfangchan/src/main/java">
+	            <property name="enableSubPackages" value="true" />
+	        </javaClientGenerator>
+	        
+	        <!-- 配置需要反向生成表的信息 -->
+	        <table tableName="newhouse" domainObjectName="Newhouse" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	    	<!--已经生成的表
+	       	 	<table tableName="expert_times_able" domainObjectName="ExpertTimesAble" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="expert_record" domainObjectName="ExpertRecord" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="tinywish" domainObjectName="TinyWish" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="activity_img" domainObjectName="ActivityImg" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="activity" domainObjectName="Activity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="volunteers_times_able" domainObjectName="VolunteersTimesAble" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="article" domainObjectName="Article" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	       	    <table tableName="dictionary" domainObjectName="Dictionary" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		    	<table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		        <table tableName="role" domainObjectName="Role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		        <table tableName="permissions" domainObjectName="Permissions" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		        <table tableName="role_permissions_relation" domainObjectName="RolePermissionsRelation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> 
+	    	 -->
+	    </context>
+	</generatorConfiguration>
